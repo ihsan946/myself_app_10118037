@@ -11,17 +11,16 @@
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/indicator_view"
         android:layout_centerInParent="true"
-
         />
     <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
         android:id="@+id/indicator_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/dimen30"
         android:layout_marginBottom="@dimen/dimen40"
-        app:dotsColor="@color/white"
+        app:dotsColor="@color/green_blue_crayola"
         app:dotsCornerRadius="8dp"
         app:dotsSize="16dp"
         app:dotsSpacing="4dp"

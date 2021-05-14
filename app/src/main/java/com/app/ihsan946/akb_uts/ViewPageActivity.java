@@ -1,11 +1,10 @@
 package com.app.ihsan946.akb_uts;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager.widget.ViewPager;
-
 import android.os.Bundle;
 import android.view.MenuItem;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
 import com.app.ihsan946.adapter.SectionAdapter;
 import com.app.ihsan946.fragment.FutureFragment;
@@ -23,7 +22,6 @@ public class ViewPageActivity extends AppCompatActivity {
     homeFragment home;
     UserFragment user;
     MenuItem menuItem;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -85,6 +83,7 @@ public class ViewPageActivity extends AppCompatActivity {
         adapter.addFragment(future);
         adapter.addFragment(user);
         viewPager.setAdapter(adapter);
+
     }
 
 

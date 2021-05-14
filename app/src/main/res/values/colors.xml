@@ -11,11 +11,14 @@
     <color name="maximum_blue">#39B7D4</color>
     <color name="glaucos">#5B7BAB</color>
     <color name="green_blue_crayola">#4B8EBD</color>
-    <color name= "green_blue">#2167AD</color>
+    <color name="green_blue">#2167AD</color>
     <color name="black3">#202020</color>
     <color name="prusian_blue">#023047</color>
     <color name="powder_blue">#CAF0F8</color>
     <color name="dark_cornflower_blue">#023E8A</color>
+    <color name="medium_turqoise">#4ECDC4</color>
+    <color name="bittersweet">#FF6B6B</color>
+    <color name="napples_yellow">#FFE66D</color>
 
 
 </resources>

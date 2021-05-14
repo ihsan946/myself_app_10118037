@@ -1,4 +1,6 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/user_fragment"
+    android:background="@color/napples_yellow"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -6,10 +8,12 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Kamu"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Mau Tau Saya Lebih Dalam?"
         android:gravity="center"
         android:textSize="30sp"
+
         />
 
 </FrameLayout>
