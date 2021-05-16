@@ -2,12 +2,272 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/dark_sea_green"
     tools:context="com.app.ihsan946.fragment.menu.HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="@drawable/border_layout2_profile"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/dimen150"
+            android:layout_height="@dimen/dimen150"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dimen10"
+            android:src="@drawable/ic_photo_profile" />
+
+        <com.prush.typedtextview.TypedTextView
+            android:id="@+id/text1_fragment_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dimen10"
+            android:fontFamily="@font/cutie_shark"
+            android:gravity="center"
+            android:text="My Profile"
+            android:textSize="30sp"
+            app:play_keystrokes_audio="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen30"
+            android:fontFamily="@font/spring_garden"
+            android:text="Nama : Muhammad Ihsan"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen30"
+            android:fontFamily="@font/spring_garden"
+            android:text="TEMPAT LAHIR : BANDUNG"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen30"
+            android:fontFamily="@font/spring_garden"
+            android:text="UMUR : 21 Tahun"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/border_layout1_profile"
+            android:orientation="vertical">
+
+            <com.prush.typedtextview.TypedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/cutie_shark"
+                android:gravity="center"
+                android:text="Interest"
+                android:textSize="30sp"
+                app:play_keystrokes_audio="false" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/layout_hobby"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen10"
+                    android:background="@drawable/border_interest">
+
+                    <TextView
+                        android:id="@+id/teks_hobi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/spring_garden"
+                        android:text="Hobby"
+                        android:textColor="@color/black"
+                        android:textSize="30sp" />
+
+                    <ImageView
+                        android:id="@+id/football_hobby"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/teks_hobi"
+                        android:layout_marginLeft="@dimen/dimen10"
+                        android:src="@drawable/football" />
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_below="@id/teks_hobi"
+                        android:layout_marginTop="@dimen/dimen30"
+                        android:layout_toRightOf="@id/football_hobby"
+                        android:src="@drawable/ic_baseline_sports_esports_24" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_Makes"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen10"
+                    android:background="@drawable/border_interest">
+
+                    <TextView
+                        android:id="@+id/text1_makes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/spring_garden"
+                        android:text="Makes"
+                        android:textColor="@color/black"
+                        android:textSize="30sp" />
+
+                    <com.prush.typedtextview.TypedTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="130dp"
+                        android:layout_below="@id/text1_makes"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/spring_garden"
+                        android:gravity="center"
+                        android:text="Nasi Goreng, Mie Goreng, Mie Yamin"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        app:play_keystrokes_audio="false"
+
+                        />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="@dimen/dimen10"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dimen10">
+
+                <RelativeLayout
+                    android:id="@+id/layout_Mikes"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen10"
+                    android:background="@drawable/border_interest">
+
+                    <TextView
+                        android:id="@+id/text1_Mikes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/spring_garden"
+                        android:text="Mikes"
+                        android:textColor="@color/black"
+                        android:textSize="30sp" />
+
+                    <com.prush.typedtextview.TypedTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dimen100"
+                        android:layout_below="@id/text1_Mikes"
+                        android:fontFamily="@font/spring_garden"
+                        android:gravity="center"
+                        android:text="Teh Manis, Capucino Cingcau, Milo"
+                        android:textColor="@color/white"
+                        android:textSize="24sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen10"
+                    android:background="@drawable/border_interest"
+
+                    >
+
+                    <TextView
+                        android:id="@+id/text1_interest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/spring_garden"
+                        android:text="Interest"
+                        android:textColor="@color/black"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="80dp"
+                        android:layout_below="@id/text1_interest"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/spring_garden"
+                        android:text="Sci-Fi, Technology"
+                        android:textColor="@color/white"
+                        android:textSize="24sp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/dimen10"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/border_interest">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/text1_cita2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:fontFamily="@font/spring_garden"
+                            android:text="CITA-CITA"
+                            android:textColor="@color/black"
+                            android:textSize="30sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/text1_cita2"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/dimen10"
+                            android:fontFamily="@font/spring_garden"
+                            android:text="Ahli Jaringan, Ahli Komputer"
+                            android:textColor="@color/white"
+                            android:textSize="30sp" />
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
 
 </FrameLayout>

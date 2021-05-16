@@ -37,7 +37,7 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setHomeButtonEnabled(true);
-            getSupportActionBar().setTitle("Navigation Drawer");
+            getSupportActionBar().setTitle(" ");
         }
 
         //
