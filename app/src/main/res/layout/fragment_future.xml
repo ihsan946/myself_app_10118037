@@ -1,17 +1,23 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/future_fragment"
-    android:background="@color/bittersweet"
+    android:background="@color/hunter_green"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.app.ihsan946.fragment.FutureFragment">
 
-    <TextView
+    <com.prush.typedtextview.TypedTextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:text="Tujuan Hidup Saya"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen30"
+        android:layout_marginRight="@dimen/dimen30"
+        android:fontFamily="@font/tentang_nanti"
         android:gravity="center"
-        android:textSize="30sp" />
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:play_keystrokes_audio="false"
+        app:typed_text="#jadilah seseorang yang bermanfaat dan selalu ada untuk mereka karena dengan kamu selalu ada seengganya kamu bisa mengurangi kekhawatiran mereka" />
 
 </FrameLayout>

@@ -22,6 +22,7 @@ public class ViewPageActivity extends AppCompatActivity {
     homeFragment home;
     UserFragment user;
     MenuItem menuItem;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

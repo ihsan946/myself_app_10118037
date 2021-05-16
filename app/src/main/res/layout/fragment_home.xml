@@ -1,19 +1,23 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/home_fragment"
-    android:background="@color/medium_turqoise"
+    android:background="@color/celtic_blue"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.app.ihsan946.fragment.homeFragment">
 
-    <TextView
+    <com.prush.typedtextview.TypedTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Perkenalan Dulu Kali Ya"
+        android:layout_marginLeft="@dimen/dimen40"
+        android:layout_marginRight="@dimen/dimen30"
         android:gravity="center"
-        android:textSize="30sp"
-
-        />
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        app:fontFamily="@font/tentang_nanti"
+        app:play_keystrokes_audio="false"
+        app:typed_text="Perkenalan Dulu Yuk, Namaku Muhammad Ihsan" />
 
 </FrameLayout>

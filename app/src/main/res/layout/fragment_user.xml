@@ -1,19 +1,41 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/user_fragment"
-    android:background="@color/napples_yellow"
+    android:background="@color/space_cadet"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.app.ihsan946.fragment.UserFragment">
 
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Mau Tau Saya Lebih Dalam?"
-        android:gravity="center"
-        android:textSize="30sp"
+        android:layout_height="match_parent">
 
-        />
+        <TextView
+            android:id="@+id/text1_fragment_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/tentang_nanti"
+            android:text="Mau Tau Saya Lebih Lanjut?"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="34sp" />
+
+        <Button
+            android:id="@+id/btn_klikdisini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text1_fragment_user"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dimen30"
+            android:background="@color/medium_turqoise"
+            android:fontFamily="@font/tentang_nanti"
+            android:textSize="30sp"
+            android:text="KLIK DISINI" />
+
+    </RelativeLayout>
+
 
 </FrameLayout>
