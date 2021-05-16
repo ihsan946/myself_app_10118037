@@ -1,12 +1,11 @@
-package com.app.ihsan946.fragment;
+package com.app.ihsan946.fragment.walktrough;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.fragment.app.Fragment;
 
 import com.app.ihsan946.akb_uts.R;
 

@@ -1,13 +1,17 @@
-package com.app.ihsan946.fragment;
+package com.app.ihsan946.fragment.walktrough;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import androidx.fragment.app.Fragment;
 
+import com.app.ihsan946.akb_uts.MenuActivity;
 import com.app.ihsan946.akb_uts.R;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -62,7 +66,25 @@ public class UserFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_user, container, false);
+
+        View rootview = inflater.inflate(R.layout.fragment_user, container, false);
+
+
+        //BUTTON klik disini
+        Button btn = rootview.findViewById(R.id.btn_klikdisini);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pindahMenuActivity(v);
+            }
+        });
+
+        return rootview;
+    }
+
+    public void pindahMenuActivity(View view) {
+        Intent intent = new Intent(getActivity(), MenuActivity.class);
+        startActivity(intent);
     }
 
 

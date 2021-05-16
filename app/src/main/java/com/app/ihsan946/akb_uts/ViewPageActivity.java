@@ -7,9 +7,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import com.app.ihsan946.adapter.SectionAdapter;
-import com.app.ihsan946.fragment.FutureFragment;
-import com.app.ihsan946.fragment.UserFragment;
-import com.app.ihsan946.fragment.homeFragment;
+import com.app.ihsan946.fragment.walktrough.FutureFragment;
+import com.app.ihsan946.fragment.walktrough.IntroFragment;
+import com.app.ihsan946.fragment.walktrough.UserFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.tbuonomo.viewpagerdotsindicator.DotsIndicator;
 
@@ -19,7 +19,7 @@ public class ViewPageActivity extends AppCompatActivity {
     ViewPager view;
     BottomNavigationView navigation;
     FutureFragment future;
-    homeFragment home;
+    IntroFragment home;
     UserFragment user;
     MenuItem menuItem;
 
@@ -76,7 +76,7 @@ public class ViewPageActivity extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         SectionAdapter adapter = new SectionAdapter(getSupportFragmentManager());
-        home = new homeFragment();
+        home = new IntroFragment();
         future = new FutureFragment();
         user = new UserFragment();
 

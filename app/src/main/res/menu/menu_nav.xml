@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:id="@+id/menu1"
-        android:icon="@drawable/home"
-        android:title="Home"
-        />
-    <item
-        android:id="@+id/menu2"
-        android:title="Daily Activity"
-        android:icon="@drawable/idea"
-        />
-    <item
-        android:id="@+id/menu3"
-        android:title="Gallery"
-        android:icon="@drawable/user"
-        />
+    <group
+        android:id="@+id/group1_menu"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu1"
+            android:icon="@drawable/home"
+            android:title="Home" />
+        <item
+            android:id="@+id/menu2"
+            android:icon="@drawable/idea"
+            android:title="Daily Activity" />
+        <item
+            android:id="@+id/menu3"
+            android:icon="@drawable/user"
+            android:title="Gallery" />
+    </group>
+
+
 </menu>
