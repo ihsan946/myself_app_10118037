@@ -64,6 +64,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/border_layout1_profile"
+            android:paddingLeft="@dimen/dimen10"
             android:orientation="vertical">
 
             <com.prush.typedtextview.TypedTextView
@@ -78,7 +79,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="170dp"
+                android:layout_height="140dp"
                 android:orientation="horizontal"
                 android:paddingLeft="10dp">
 
@@ -135,17 +136,16 @@
 
                     <com.prush.typedtextview.TypedTextView
                         android:layout_width="wrap_content"
-                        android:layout_height="130dp"
+                        android:layout_height="100dp"
                         android:layout_below="@id/text1_makes"
-                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="-1dp"
                         android:fontFamily="@font/spring_garden"
                         android:gravity="center"
                         android:text="Nasi Goreng, Mie Goreng, Mie Yamin"
                         android:textColor="@color/white"
-                        android:textSize="24sp"
-                        app:play_keystrokes_audio="false"
+                        android:textSize="20sp"
 
-                        />
+                        app:play_keystrokes_audio="false" />
 
                 </RelativeLayout>
 
@@ -153,8 +153,9 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="140dp"
-                android:layout_marginTop="@dimen/dimen10"
+                android:layout_height="100dp"
+                android:layout_marginTop="@dimen/dimen5"
+
                 android:orientation="horizontal"
                 android:paddingLeft="@dimen/dimen10">
 
@@ -177,13 +178,13 @@
 
                     <com.prush.typedtextview.TypedTextView
                         android:layout_width="wrap_content"
-                        android:layout_height="@dimen/dimen100"
+                        android:layout_height="70dp"
                         android:layout_below="@id/text1_Mikes"
                         android:fontFamily="@font/spring_garden"
                         android:gravity="center"
                         android:text="Teh Manis, Capucino Cingcau, Milo"
                         android:textColor="@color/white"
-                        android:textSize="24sp" />
+                        android:textSize="20sp" />
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -206,28 +207,32 @@
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="80dp"
+                        android:layout_height="50dp"
                         android:layout_below="@id/text1_interest"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="10dp"
                         android:fontFamily="@font/spring_garden"
                         android:text="Sci-Fi, Technology"
                         android:textColor="@color/white"
-                        android:textSize="24sp" />
+                        android:textSize="20sp" />
                 </RelativeLayout>
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="150dp">
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:gravity="center">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dimen5"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginTop="@dimen/dimen10"
-                    android:layout_marginRight="20dp"
+                    android:layout_marginRight="30dp"
+                    android:gravity="center"
                     android:background="@drawable/border_interest">
 
                     <RelativeLayout
@@ -253,7 +258,7 @@
                             android:fontFamily="@font/spring_garden"
                             android:text="Ahli Jaringan, Ahli Komputer"
                             android:textColor="@color/white"
-                            android:textSize="30sp" />
+                            android:textSize="20sp" />
 
 
                     </RelativeLayout>
