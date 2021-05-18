@@ -8,8 +8,13 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.app.ihsan946.adapter.AdapterRVDaily;
 import com.app.ihsan946.akb_uts.R;
+import com.app.ihsan946.model.modelDaily;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -61,13 +66,51 @@ public class DailyActFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        final View view = inflater.inflate(R.layout.fragment_daily_act, container, false);
+        final FragmentActivity fragment = getActivity();
+        final RecyclerView recyclerView = view.findViewById(R.id.recycle_view1);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(fragment, LinearLayoutManager.VERTICAL, false);
+        recyclerView.setLayoutManager(layoutManager);
+        modelDaily model = new modelDaily();
+
+
+        //
+        String[] subjects = {
+                "Bersepeda", "Jogging", "Main Game", "Belajar"
+        };
+        int[] subjects2 = {R.drawable.daily_1, R.drawable.daily_2, R.drawable.daily_3, R.drawable.daily_4};
+        model.setSubjects(subjects);
+        model.setSubjects2(subjects2);
+        //
+
+        //
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                final AdapterRVDaily adapter = new AdapterRVDaily(model.getSubjects(), model.getSubjects2(), fragment);
+                fragment.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        recyclerView.setAdapter(adapter);
+                    }
+
+                });
+            }
+        }).start();
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_daily_act, container, false);
+        return view;
     }
+
+
+    //
+
+    //
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         getActivity().setTitle("Daily Activity");
     }
+
 }

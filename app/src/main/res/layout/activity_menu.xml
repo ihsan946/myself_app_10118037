@@ -5,8 +5,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/celtic_blue"
     tools:context=".MenuActivity"
     tools:openDrawer="start">
+
+    <com.prush.typedtextview.TypedTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/tentang_nanti"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:play_keystrokes_audio="false"
+        app:typed_text="SELAMAT DATANG" />
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"

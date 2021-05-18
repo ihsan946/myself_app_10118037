@@ -28,7 +28,7 @@
             android:layout_marginTop="@dimen/dimen10"
             android:fontFamily="@font/cutie_shark"
             android:gravity="center"
-            android:text="My Profile"
+            app:typed_text="My Profile"
             android:textSize="30sp"
             app:play_keystrokes_audio="false" />
 
@@ -73,7 +73,7 @@
                 android:layout_gravity="center"
                 android:fontFamily="@font/cutie_shark"
                 android:gravity="center"
-                android:text="Interest"
+                app:typed_text="Interest"
                 android:textSize="30sp"
                 app:play_keystrokes_audio="false" />
 
@@ -144,7 +144,6 @@
                         android:text="Nasi Goreng, Mie Goreng, Mie Yamin"
                         android:textColor="@color/white"
                         android:textSize="20sp"
-
                         app:play_keystrokes_audio="false" />
 
                 </RelativeLayout>
@@ -231,13 +230,13 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="@dimen/dimen5"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginRight="30dp"
+                    android:layout_marginRight="25dp"
                     android:gravity="center"
                     android:background="@drawable/border_interest">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="wrap_content">
 
                         <TextView
                             android:id="@+id/text1_cita2"
@@ -259,8 +258,6 @@
                             android:text="Ahli Jaringan, Ahli Komputer"
                             android:textColor="@color/white"
                             android:textSize="20sp" />
-
-
                     </RelativeLayout>
 
 
