@@ -12,6 +12,7 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.app.ihsan946.adapter.AdapterFLDaily;
 import com.app.ihsan946.adapter.AdapterRVDaily;
 import com.app.ihsan946.akb_uts.R;
 import com.app.ihsan946.model.modelDaily;
@@ -68,32 +69,65 @@ public class DailyActFragment extends Fragment {
                              Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_daily_act, container, false);
         final FragmentActivity fragment = getActivity();
+        final FragmentActivity fragment2 = getActivity();
         final RecyclerView recyclerView = view.findViewById(R.id.recycle_view1);
+        final RecyclerView recyclerView2 = view.findViewById(R.id.recycle_view2);
+        LinearLayoutManager layoutManager2 = new LinearLayoutManager(fragment2, LinearLayoutManager.HORIZONTAL, false);
         LinearLayoutManager layoutManager = new LinearLayoutManager(fragment, LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(layoutManager);
+        recyclerView2.setLayoutManager(layoutManager2);
         modelDaily model = new modelDaily();
 
 
-        //
+        //daily activity
         String[] subjects = {
                 "Bersepeda", "Jogging", "Main Game", "Belajar"
         };
         int[] subjects2 = {R.drawable.daily_1, R.drawable.daily_2, R.drawable.daily_3, R.drawable.daily_4};
+        String[] subjects3 = {"Tidak terlalu sering, kalo lagi pengen aja", "Kalo ada temen ngajak", "Kalo lagi Bosen",
+                "Kalo lagi ada tugas dan lagi semangat mencari hal baru"};
+
         model.setSubjects(subjects);
         model.setSubjects2(subjects2);
-        //
+        model.setSubjects3(subjects3);
+
+        //friendlist
+        String[] nama = {
+                "Tassyakur Pasya", "Fatahilla Satria Bima Seno", "Dian Rosa Pratama"
+        };
+        int[] foto_profile = {
+                R.drawable.profile_pasya, R.drawable.profile_fath, R.drawable.profile_dian
+        };
+        model.setNama_friendlist(nama);
+        model.setFoto_profile(foto_profile);
 
         //
         new Thread(new Runnable() {
             @Override
             public void run() {
-                final AdapterRVDaily adapter = new AdapterRVDaily(model.getSubjects(), model.getSubjects2(), fragment);
+                final AdapterRVDaily adapter = new AdapterRVDaily(fragment, model.getSubjects(), model.getSubjects2(), model.getSubjects3());
+//                final AdapterFLDaily adapter2 = new AdapterFLDaily(fragment,model.getSubjects(),model.getSubjects2());
                 fragment.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
                         recyclerView.setAdapter(adapter);
+
+
                     }
 
+                });
+            }
+        }).start();
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                final AdapterFLDaily adapter = new AdapterFLDaily(fragment, model.getNama_friendlist(), model.getFoto_profile());
+                fragment2.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        recyclerView2.setAdapter(adapter);
+                    }
                 });
             }
         }).start();

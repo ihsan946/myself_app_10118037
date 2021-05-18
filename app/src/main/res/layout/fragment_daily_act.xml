@@ -3,37 +3,79 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/celtic_blue"
+    android:orientation="vertical"
     tools:context="com.app.ihsan946.fragment.menu.DailyActFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <RelativeLayout
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="260dp"
-        android:background="@drawable/border_daily_recycle"
-        android:paddingTop="@dimen/dimen10">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
 
-        <TextView
-            android:id="@+id/text_daily"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:fontFamily="@font/tentang_nanti"
-            android:text="Daily Activity"
-            android:textColor="@color/black"
-            android:textSize="30sp"
-            android:textStyle="bold" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycle_view1"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/text_daily"
-            android:layout_centerInParent="true"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            tools:listitem="@layout/item_daily_act" />
+            android:layout_height="260dp"
+            android:layout_margin="@dimen/dimen30"
+            android:paddingTop="@dimen/dimen10">
+
+            <TextView
+                android:id="@+id/text_daily"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/tentang_nanti"
+                android:text="Daily Activity"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycle_view1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/text_daily"
+                android:layout_centerVertical="true"
+                android:background="@drawable/border_daily_recycle"
+                android:padding="@dimen/dimen10"
+                tools:listitem="@layout/item_daily_act" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginLeft="@dimen/dimen30"
+            android:layout_marginRight="@dimen/dimen30"
+            android:paddingTop="@dimen/dimen10">
+
+            <TextView
+                android:id="@+id/text_friendlist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/tentang_nanti"
+                android:text="Friend List"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycle_view2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/text_friendlist"
+                android:background="@drawable/border_friendlist_recycle"
+                android:paddingLeft="@dimen/dimen10"
+                android:paddingRight="@dimen/dimen10"
+                tools:listitem="@layout/item_friendlist" />
 
 
-    </RelativeLayout>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
 
 </FrameLayout>

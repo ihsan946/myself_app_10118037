@@ -15,38 +15,18 @@ import com.app.ihsan946.akb_uts.R;
 public class AdapterRVDaily extends RecyclerView.Adapter<AdapterRVDaily.ViewHolder> {
 
     private final Context context;
-    private String[] SubjectValues;
-    private int[] gambar_act;
+    private final String[] SubjectValues;
+    private final int[] gambar_act;
+    private final String[] SubjectValues3;
 
-
-    public AdapterRVDaily(String[] subjectValues, int[] gambar_act, Context context) {
-        SubjectValues = subjectValues;
-        this.gambar_act = gambar_act;
+    public AdapterRVDaily(Context context, String[] subjectValues, int[] gambar_act, String[] subjectValues3) {
         this.context = context;
-    }
-
-
-    //
-
-
-    //
-
-    public String[] getSubjectValues() {
-        return SubjectValues;
-    }
-    //
-
-    public void setSubjectValues(String[] subjectValues) {
         SubjectValues = subjectValues;
-    }
-
-    public int[] getGambar_act() {
-        return gambar_act;
-    }
-
-    public void setGambar_act(int[] gambar_act) {
         this.gambar_act = gambar_act;
+        SubjectValues3 = subjectValues3;
     }
+    //
+
 
     //
     @NonNull
@@ -62,6 +42,7 @@ public class AdapterRVDaily extends RecyclerView.Adapter<AdapterRVDaily.ViewHold
 
         holder.imageView.setImageResource(gambar_act[position]);
         holder.textView.setText(SubjectValues[position]);
+        holder.textView2.setText(SubjectValues3[position]);
     }
 
     @Override
@@ -69,15 +50,18 @@ public class AdapterRVDaily extends RecyclerView.Adapter<AdapterRVDaily.ViewHold
         return SubjectValues.length;
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder {
+    static class ViewHolder extends RecyclerView.ViewHolder {
         TextView textView;
         ImageView imageView;
+        TextView textView2;
 
         ViewHolder(View view) {
             super(view);
 
             imageView = view.findViewById(R.id.item_img_daily);
             textView = view.findViewById(R.id.item_text_daily);
+            textView2 = view.findViewById(R.id.item_text2_daily);
+
 
         }
 

@@ -1,30 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:paddingLeft="16dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="200dp"
+    android:orientation="horizontal"
+    android:paddingLeft="20dp"
     android:paddingTop="20dp"
-    android:paddingRight="16dp"
-    android:paddingBottom="20dp">
+    android:paddingRight="20dp"
+    android:paddingBottom="50dp">
 
     <ImageView
         android:id="@+id/item_img_daily"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/dimen100"
+        android:layout_height="@dimen/dimen100"
         android:layout_gravity="center"
-        android:src="@drawable/sepeda" />
+        android:src="@drawable/daily_1" />
 
-    <TextView
-        android:id="@+id/item_text_daily"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:fontFamily="@font/spring_garden"
-        android:gravity="center"
-        android:hint="Bersepeda"
-        android:textColor="@android:color/black"
-        android:textSize="30sp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dimen10">
+
+        <TextView
+            android:id="@+id/item_text_daily"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dimen10"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/item_img_daily"
+            android:fontFamily="@font/spring_garden"
+            android:hint="Bersepeda"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+            tools:ignore="NotSibling" />
+
+        <TextView
+            android:id="@+id/item_text2_daily"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_text_daily"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/spring_garden"
+            android:hint="Tidak terlalu sering, kalo lagi pengen aja"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
 
 
 </LinearLayout>
