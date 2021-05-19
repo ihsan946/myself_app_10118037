@@ -8,8 +8,13 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.app.ihsan946.adapter.AdapterGallery;
 import com.app.ihsan946.akb_uts.R;
+import com.app.ihsan946.model.modelDaily;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -61,8 +66,35 @@ public class GalleryFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_gallery, container, false);
+        final View view = inflater.inflate(R.layout.fragment_gallery, container, false);
+        final FragmentActivity fragment = getActivity();
+        final RecyclerView recyclerView3 = view.findViewById(R.id.recycle_view3);
+        recyclerView3.setLayoutManager(new GridLayoutManager(fragment, 2));
+        modelDaily model = new modelDaily();
+
+        //gallery
+        int[] gambar_gallery = {
+                R.drawable.gallery_1, R.drawable.gallery_2, R.drawable.gallery_3, R.drawable.gallery_4,
+                R.drawable.gallery_5, R.drawable.gallery_6, R.drawable.gallery_7, R.drawable.gallery_8,
+                R.drawable.gallery_9, R.drawable.gallery_10, R.drawable.gallery_11, R.drawable.gallery_12
+        };
+        model.setFoto_gallery(gambar_gallery);
+
+        //
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                final AdapterGallery adapter = new AdapterGallery(fragment, model.getFoto_gallery());
+                fragment.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        recyclerView3.setAdapter(adapter);
+                    }
+
+                });
+            }
+        }).start();
+        return view;
     }
 
     @Override

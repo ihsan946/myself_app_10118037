@@ -7,6 +7,7 @@ public class modelDaily {
     private String[] subjects3;
     private String[] nama_friendlist;
     private int[] foto_profile;
+    private int[] foto_gallery;
 
 
     //
@@ -58,6 +59,17 @@ public class modelDaily {
 
     public void setFoto_profile(int[] foto_profile) {
         this.foto_profile = foto_profile;
+    }
+    //
+
+    //
+
+    public int[] getFoto_gallery() {
+        return foto_gallery;
+    }
+
+    public void setFoto_gallery(int[] foto_gallery) {
+        this.foto_gallery = foto_gallery;
     }
     //
 }

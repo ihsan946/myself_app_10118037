@@ -2,12 +2,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/prusian_blue"
     tools:context="com.app.ihsan946.fragment.menu.GalleryFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical"
+        android:padding="@dimen/dimen10">
+
+        <com.prush.typedtextview.TypedTextView
+            android:id="@+id/text_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/tentang_nanti"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:typed_text="Gallery" />
+        <!-- TODO: Update blank fragment layout -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycle_view3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/text_gallery"
+            android:background="@drawable/border_gallery"
+            android:padding="@dimen/dimen10"
+            tools:listitem="@layout/item_gallery" />
+
+    </RelativeLayout>
+
 
 </FrameLayout>

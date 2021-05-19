@@ -106,7 +106,6 @@ public class DailyActFragment extends Fragment {
             @Override
             public void run() {
                 final AdapterRVDaily adapter = new AdapterRVDaily(fragment, model.getSubjects(), model.getSubjects2(), model.getSubjects3());
-//                final AdapterFLDaily adapter2 = new AdapterFLDaily(fragment,model.getSubjects(),model.getSubjects2());
                 fragment.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {

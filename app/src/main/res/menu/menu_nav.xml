@@ -13,8 +13,17 @@
             android:title="Daily Activity" />
         <item
             android:id="@+id/menu3"
-            android:icon="@drawable/user"
+            android:icon="@drawable/gallery"
             android:title="Gallery" />
+    </group>
+    <group
+        android:id="@+id/group2_menu"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/menu4"
+            android:icon="@drawable/user"
+            android:title="profile" />
     </group>
 
 
