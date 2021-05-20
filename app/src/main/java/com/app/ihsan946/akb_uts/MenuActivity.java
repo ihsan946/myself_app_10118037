@@ -17,6 +17,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.app.ihsan946.fragment.menu.DailyActFragment;
 import com.app.ihsan946.fragment.menu.GalleryFragment;
 import com.app.ihsan946.fragment.menu.HomeFragment;
+import com.app.ihsan946.fragment.menu.VideoFragment;
 import com.google.android.material.navigation.NavigationView;
 
 public class MenuActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -78,6 +79,9 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.menu3:
                 fragment = new GalleryFragment();
+                break;
+            case R.id.menu4:
+                fragment = new VideoFragment();
                 break;
         }
 

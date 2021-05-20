@@ -1,0 +1,66 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green_blue_crayola"
+    android:paddingTop="20dp"
+    tools:context="com.app.ihsan946.fragment.menu.VideoFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.prush.typedtextview.TypedTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/tentang_nanti"
+            android:gravity="center"
+            android:textSize="20sp"
+            app:play_keystrokes_audio="false"
+            app:typed_text="MY VIDEO &amp; MUSIC FAVORITE" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen10"
+            android:layout_marginRight="@dimen/dimen10"
+            android:background="@drawable/border_video"
+            android:orientation="horizontal"
+            android:padding="@dimen/dimen10">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycle_view4"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                tools:listitem="@layout/item_video" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="@dimen/dimen10"
+            android:layout_marginRight="@dimen/dimen10"
+            android:background="@drawable/border_video"
+            android:orientation="vertical"
+            android:padding="30dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycle_view5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/dimen10"
+                tools:listitem="@layout/item_fav_music" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

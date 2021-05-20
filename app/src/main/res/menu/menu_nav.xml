@@ -19,9 +19,12 @@
     <group
         android:id="@+id/group2_menu"
         android:checkableBehavior="single">
-
         <item
             android:id="@+id/menu4"
+            android:icon="@drawable/play_button"
+            android:title="Music &amp; Video Favorite" />
+        <item
+            android:id="@+id/menu5"
             android:icon="@drawable/user"
             android:title="profile" />
     </group>

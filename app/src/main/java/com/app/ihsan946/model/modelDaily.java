@@ -8,6 +8,9 @@ public class modelDaily {
     private String[] nama_friendlist;
     private int[] foto_profile;
     private int[] foto_gallery;
+    private String[] uri_video;
+    private String[] judul_video;
+    private String[] judul_musik_fav;
 
 
     //
@@ -72,4 +75,31 @@ public class modelDaily {
         this.foto_gallery = foto_gallery;
     }
     //
+
+    //
+
+    public String[] getUri_video() {
+        return uri_video;
+    }
+
+    public void setUri_video(String[] uri_video) {
+        this.uri_video = uri_video;
+    }
+
+    public String[] getJudul_video() {
+        return judul_video;
+    }
+
+    public void setJudul_video(String[] judul_video) {
+        this.judul_video = judul_video;
+    }
+
+    //
+    public String[] getJudul_musik_fav() {
+        return judul_musik_fav;
+    }
+
+    public void setJudul_musik_fav(String[] judul_musik_fav) {
+        this.judul_musik_fav = judul_musik_fav;
+    }
 }

@@ -18,6 +18,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/tentang_nanti"
             android:gravity="center"
+            android:layout_centerHorizontal="true"
             android:textColor="@color/white"
             android:textSize="30sp"
             app:typed_text="Gallery" />

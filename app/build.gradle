@@ -47,7 +47,7 @@ dependencies {
     implementation 'com.github.iamporus:TypedTextView:1.1.2'
     implementation 'com.google.android.material:material:1.0.0'
 
-
+    implementation 'com.github.eddydn:videoplayer:1.10'
 
 
 
