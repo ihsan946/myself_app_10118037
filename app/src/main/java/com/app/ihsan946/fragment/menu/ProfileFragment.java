@@ -1,6 +1,9 @@
 package com.app.ihsan946.fragment.menu;
 
+import android.Manifest;
+import android.app.Dialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -8,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import com.app.ihsan946.akb_uts.R;
@@ -64,12 +69,18 @@ public class ProfileFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
-        Button instagram, email, findme;
+        //
+        Button instagram, email, findme, cellphone, about;
 
+        //
         instagram = view.findViewById(R.id.instagram_contact);
         email = view.findViewById(R.id.email_contact);
         findme = view.findViewById(R.id.findme_contact);
+        cellphone = view.findViewById(R.id.notelp_contact);
+        about = view.findViewById(R.id.about_contact);
 
+
+        //
         instagram.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -89,7 +100,32 @@ public class ProfileFragment extends Fragment {
                 findMe("https://goo.gl/maps/SifsQAEiJ1KusQjD7");
             }
         });
+        cellphone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                callPhone("tel:08382201677");
+            }
+        });
 
+        about.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Dialog dialog = new Dialog(getActivity());
+                dialog.setContentView(R.layout.custom_dialog_about);
+
+                //
+                Button close = dialog.findViewById(R.id.btn_close_dialog);
+
+                close.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
+
+                dialog.show();
+            }
+        });
 
         // Inflate the layout for this fragment
         return view;
@@ -115,6 +151,26 @@ public class ProfileFragment extends Fragment {
         Uri uri = Uri.parse(s);
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
+
+    }
+
+    private void callPhone(String s) {
+        final int REQUEST_PHONE_CALL = 1;
+
+        Uri uri = Uri.parse(s);
+        Intent intent = new Intent(Intent.ACTION_CALL);
+        intent.setData(uri);
+
+        if (ContextCompat.checkSelfPermission(getActivity(),
+                Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+
+            ActivityCompat.requestPermissions(getActivity(),
+                    new String[]{Manifest.permission.CALL_PHONE}, REQUEST_PHONE_CALL);
+        } else {
+
+            startActivity(intent);
+        }
+
 
     }
 

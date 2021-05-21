@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         android:background="@color/glaucos"
         android:orientation="vertical"
-        android:padding="@dimen/dimen10">
+        android:padding="@dimen/dimen5">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -134,6 +134,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/spring_garden"
                     android:text="CONTACT : "
+                    android:textColor="@color/black"
                     android:textSize="21sp" />
 
                 <Button
@@ -144,6 +145,7 @@
                     android:layout_marginRight="@dimen/dimen5"
                     android:background="@drawable/border_button_contact"
                     android:fontFamily="@font/spring_garden"
+                    android:textColor="@color/white"
                     android:text="Instagram" />
 
                 <Button
@@ -155,6 +157,7 @@
                     android:layout_toRightOf="@id/instagram_contact"
                     android:background="@drawable/border_button_contact"
                     android:fontFamily="@font/spring_garden"
+                    android:textColor="@color/white"
                     android:text="Email" />
 
                 <Button
@@ -166,6 +169,7 @@
                     android:layout_toRightOf="@id/email_contact"
                     android:background="@drawable/border_button_contact"
                     android:fontFamily="@font/spring_garden"
+                    android:textColor="@color/white"
                     android:text="Cellphone" />
 
                 <Button
@@ -177,6 +181,7 @@
                     android:layout_toRightOf="@id/notelp_contact"
                     android:background="@drawable/border_button_contact"
                     android:fontFamily="@font/spring_garden"
+                    android:textColor="@color/white"
                     android:text="FIND ME" />
 
                 <Button
@@ -188,6 +193,7 @@
                     android:layout_marginTop="@dimen/dimen10"
                     android:background="@drawable/border_button_contact"
                     android:fontFamily="@font/spring_garden"
+                    android:textColor="@color/white"
                     android:text="About" />
 
 
