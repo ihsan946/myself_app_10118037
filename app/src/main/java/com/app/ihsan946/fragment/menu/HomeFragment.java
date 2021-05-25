@@ -4,12 +4,14 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.app.ihsan946.akb_uts.R;
+import com.app.ihsan946.model.modelDaily;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -58,11 +60,22 @@ public class HomeFragment extends Fragment {
         }
     }
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        modelDaily model = new modelDaily();
+
+        //
+        TextView textViewnama = view.findViewById(R.id.text4_home_profile);
+        textViewnama.setText("Muhammad Ihsan");
+
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        return view;
+
+
     }
 
     @Override

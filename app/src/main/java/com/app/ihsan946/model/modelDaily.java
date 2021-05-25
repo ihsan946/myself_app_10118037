@@ -12,6 +12,7 @@ public class modelDaily {
     private String[] judul_video;
     private String[] judul_musik_fav;
 
+    private String nama_profile;
 
     //
 
@@ -102,4 +103,16 @@ public class modelDaily {
     public void setJudul_musik_fav(String[] judul_musik_fav) {
         this.judul_musik_fav = judul_musik_fav;
     }
+
+    //
+
+    public String getNama_profile() {
+        return nama_profile;
+    }
+
+    public void setNama_profile(String nama_profile) {
+        this.nama_profile = nama_profile;
+    }
+
+
 }
