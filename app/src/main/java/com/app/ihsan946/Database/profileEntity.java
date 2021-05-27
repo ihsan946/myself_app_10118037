@@ -1,5 +1,12 @@
 package com.app.ihsan946.Database;
 
+//NIM : 10118037
+//Nama : Muhammad Ihsan
+//Kelas : IF-1/2018
+//Tanggal Pembuatan : 25 Mei 2021
+//
+//
+
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;

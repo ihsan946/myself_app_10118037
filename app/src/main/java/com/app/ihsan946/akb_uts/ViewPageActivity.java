@@ -1,5 +1,12 @@
 package com.app.ihsan946.akb_uts;
 
+//NIM : 10118037
+//Nama : Muhammad Ihsan
+//Kelas : IF-1/2018
+//Tanggal Pembuatan : 24 Mei 2021
+//
+//
+
 import android.os.Bundle;
 import android.view.MenuItem;
 

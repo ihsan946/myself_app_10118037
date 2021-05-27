@@ -1,5 +1,11 @@
 package com.app.ihsan946.model;
 
+//NIM : 10118037
+//Nama : Muhammad Ihsan
+//Kelas : IF-1/2018
+//Tanggal Pembuatan : 24 Mei 2021
+//
+//
 public class modelDaily {
 
     private String[] subjects;
