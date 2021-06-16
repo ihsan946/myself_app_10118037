@@ -1,4 +1,4 @@
-package com.app.ihsan946.Database;
+package com.app.ihsan946.database;
 
 //NIM : 10118037
 //Nama : Muhammad Ihsan

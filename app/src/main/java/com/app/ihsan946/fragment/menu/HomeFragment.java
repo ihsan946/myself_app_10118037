@@ -16,9 +16,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.room.Room;
 
 import com.app.ihsan946.akb_uts.R;
+import com.app.ihsan946.database.databaseku;
+import com.app.ihsan946.database.profileEntity;
 import com.app.ihsan946.model.modelDaily;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -73,10 +79,16 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         modelDaily model = new modelDaily();
+        databaseku db;
+        db = Room.databaseBuilder(getActivity(), databaseku.class, "profile").allowMainThreadQueries().build();
+        List<profileEntity> profileEntity = new ArrayList<>();
+
+        profileEntity.addAll(db.profileDao().tampilSeluruhprofile());
+
 
         //
         TextView textViewnama = view.findViewById(R.id.text4_home_profile);
-        textViewnama.setText("Muhammad Ihsan");
+        textViewnama.setText(profileEntity.get(0).getNama());
 
 
         // Inflate the layout for this fragment
